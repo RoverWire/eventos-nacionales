@@ -1,0 +1,110 @@
+/* CSS Document */
+html, body                             { height:100%; width:100%; margin:0; padding:0; }
+#header                                { background:#FFF url(../img/header_main.png) left top repeat-x; height:99px; clear:both; }
+#head_main                             { background:url(../img/header_logo.png) left top no-repeat; height: 61px; }
+#log_out                               { float:right; height:39px; width:93px; margin:11px 30px 0 0; background-image:url(../img/log_out.png); background-position: top left; background-repeat:no-repeat; }
+#log_out span                          { display:none; }
+#log_out:hover                         { background-position:bottom left; }
+#head_user                             { float:right; margin:10px 25px 0 0; font-size:1.2em; color:#FFF; min-width:150px; }
+#head_user strong                      { text-shadow: 0px 1px 1px #000; behavior: url(ie-css3.htc); }
+#head_user a                           { color: #000; text-decoration:underline; font-size:0.8em; }
+#head_user a:hover                     { color: #FFF; text-decoration:none; font-size:0.8em; }
+
+#head_nav                              { height:36px; background-color:#A27CAF; border-top: 1px solid #C4ABCB; border-bottom: 1px solid #9366A2; }
+#head_nav ul                           { margin:0; padding:0; list-style-type:none; width:auto; float:left;	border-right:1px solid #C4ABCB; }
+#head_nav ul li                        { display:block; float:left; margin:0; }
+#head_nav ul li a                      { float:left; width:auto; height:30px; display:block; padding:6px 20px 0 20px; color:#FFF; font-size:14px; text-decoration:none; border-right:1px solid #9366A2; border-left:1px solid #C4ABCB; }
+#head_nav ul li a:hover, 
+#BarraMenu ul li a.actual              { color:#000; font-size:14px; text-decoration:none; background-color: #C4ABCB; }
+
+.contenedor                            { position:relative; min-height:100%; height:auto !important; height:100%; overflow:hidden; }
+#contenido                             { min-width:960px; margin:38px auto 70px auto; }
+.main_gradient                         { background:#FFF url('../img/body_gradient.png') 0px 100px repeat-x; }
+.login_bg                              { background: #333 url(../img/bg.gif) top left repeat; }
+
+#footer                                { position:absolute; width:100%; bottom:0; height:40px; background:#EBEBEB url(../img/footer_main.png) top left repeat-x; }
+#footer p                              { color:#999999; margin:12px; font-size:0.8em; }
+#footer_img                            { position:absolute; right:20px; bottom:0; }
+
+/* Clases y Estilos */
+
+h1,h2,h3,h4,h5                         { color:#65378A; }
+.titulo_seccion                        { width:100%; border-bottom:2px solid #999; clear:both;  text-shadow: 1px 1px 1px #999; }
+.titulo_lateral                        { background-color:#EBEBEB; height:31px; border-top: 1px solid #CCCCCC; border-bottom: 2px solid #999999; margin-top:5px; color:#643487; font-weight:bold; padding-left:10px; line-height:2.2em; font-size:1.2em; text-shadow: 1px 1px 0px #999; }
+
+/*
+ * Menu Lateral de Opciones
+ */
+ 
+.menu_lateral                          { margin:0; padding:0; list-style-type:none; width:auto; overflow:hidden; }
+ul.menu_lateral li                     { display:block; float:left; margin:0; clear:both; width:100%; border-bottom: 1px solid #CCCCCC; }
+ul.menu_lateral li a                   { float:left; width:100%; height:50px; display:block; text-decoration:none; font-size:1.1em; color:#333; padding-top:14px; }
+ul.menu_lateral li a:hover             { background-color:#F4F4F4; }
+ul.menu_lateral li a small             { font-size:0.8em; color:#999; text-decoration:none; }
+
+.icon_lateral                          { width:32px; height:32px; display:block; float:left; background-image:url(../img/iconos-laterales.gif); margin-right:10px; margin-left:5px; }
+.icon_registro                         { background-position: 0px top; }
+ul.menu_lateral li a:hover 
+span.icon_registro                     { background-position: 0px bottom; }
+.icon_credencial                       { background-position: -34px top; }
+ul.menu_lateral li a:hover 
+span.icon_credencial                   { background-position: -34px bottom; }
+.icon_grafica                          { background-position: -67px top; }
+ul.menu_lateral li a:hover 
+span.icon_grafica                      { background-position: -67px bottom; }
+.icon_buscar                           { background-position: -101px top; }
+ul.menu_lateral li a:hover 
+span.icon_buscar                       { background-position: -101px bottom; }
+.icon_imprimir                         { background-position: -135px top; }
+ul.menu_lateral li a:hover 
+span.icon_imprimir                     { background-position: -135px bottom; }
+.icon_llave                            { background-position: -169px top; }
+ul.menu_lateral li a:hover 
+span.icon_llave                        { background-position: -169px bottom; }
+.icon_base                             { background-position: -202px top; }
+ul.menu_lateral li a:hover 
+span.icon_base                         { background-position: -202px bottom; }
+.icon_usuario                          { background-position: -266px top; }
+ul.menu_lateral li a:hover 
+span.icon_usuario                      { background-position: -266px bottom; }
+
+/*
+ * Fin Menu Lateral
+ */
+
+.dash_option                           { width:118px; height:121px; border:1px solid #CCC; background:url(../img/dash_option_bg.png) top left repeat-x; margin:0 20px 20px 0; float:left; text-decoration:none; text-align:center; color:#9E9E9E; font-size:1.3em; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; behavior: url(css/ie-css3.htc); }
+.dash_option:hover                     { background-position: left bottom; color:#65378A; border:1px solid #999; }
+.dash_icon                             { background-image:url(../img/iconos-dash.png); background-repeat:no-repeat; background-position:left top; display:block; margin:15px auto; width:48px; height:48px; float:none; clear:both; }
+a.dash_option:hover 
+span.dash_icon_registro                { background-position: 0px bottom; }
+.dash_icon_staff                       { background-position: -53px top; }
+a.dash_option:hover 
+span.dash_icon_staff                   { background-position: -53px bottom; }
+.dash_icon_campos                      { background-position: -108px top; }
+a.dash_option:hover 
+span.dash_icon_campos                  { background-position: -108px bottom; }
+.dash_icon_membresia                   { background-position: -215px top; }
+a.dash_option:hover 
+span.dash_icon_membresia               { background-position: -215px bottom; }
+.dash_icon_usuarios                    { background-position: -265px top; }
+a.dash_option:hover 
+span.dash_icon_usuarios                { background-position: -265px bottom; }
+.dash_icon_ajustes                     { background-position: -162px top; }
+a.dash_option:hover 
+span.dash_icon_ajustes                 { background-position: -162px bottom; }
+
+
+.pagination                            { margin-top:1em; text-align:center; }
+.pagination a                          { margin: 0.2em; display:inline-block; padding:0.3em 0.5em; background-color: #e6e6e6; text-decoration: none; color: #65378A; border: 1px solid #65378A; }
+.pagination a:hover, .pagination b     { margin: 0.2em; display:inline-block; padding:0.3em 0.5em; background-color: #C4ABCB; text-decoration: none; color: #65378A; border: 1px solid #65378A; }
+
+.jquery-notify-bar                     { width:100%; position:fixed; top:0; left:0; z-index:32768; background-color:#efefef; font-size:18px; color:#000; text-align:center; font-family: Arial, Verdana, sans-serif; padding:20px 0px; border-bottom:1px solid #bbb; opacity:0.7; }
+.jquery-notify-bar.error               { color:#f00; background-color:#FDD; }
+.jquery-notify-bar.success             { color:#060; background-color:#BBFFB6; }
+.notify-bar-close                      { position:absolute; left:95%; font-size:11px; }
+
+.campo_option                          { font-size:1.05em; width:27%; padding:10px; border:1px solid #CCC; background:url(../img/dash_option_bg.png) top left repeat-x; margin:0 20px 20px 0; float:left; text-decoration:none; color:#9E9E9E; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; behavior: url(ie-css3.htc); }
+.campo_option:hover                    { background-position: left bottom; color:#333; border:1px solid #999; }
+a.campo_option span.dash_icon          { clear:none; display:inline-block; float:left; margin-right:15px; }
+a.campo_option:hover 
+span.dash_icon_campos                  { background-position: -108px bottom; }
