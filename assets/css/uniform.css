@@ -1,0 +1,83 @@
+code, kbd, samp, pre, tt, var, input[type="text"], input[type="password"], textarea, select, option { font-family: "Lucida Grande",Tahoma,Arial,Verdana,sans-serif; }
+textarea, input, select, label, optgroup { margin-top: 5px; vertical-align: middle; font-size:1.1em; line-height:1.2em; }
+textarea:hover, input[type='text']:hover, input[type='password']:hover, select:hover { border-color: #666; }
+textarea:focus, input[type='text']:focus, input[type='password']:focus, select:focus { border-color: #888; outline: 2px solid #C7A9E2; }
+input[type='text'], input[type='password'], textarea, select  { padding:5px; vertical-align:middle; border:1px solid #B3B3B3; }
+button                                 { margin-top: 5px; vertical-align: middle; line-height:1.3em; color: #555555; font-family: "Lucida Grande",Tahoma,Arial,Verdana,sans-serif; font-weight: normal; background: #e6e6e6 url(images/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x; padding:5px 10px 5px 10px; border: 1px solid #d3d3d3; border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px; display:inline-block; position:relative; margin-right:0.1em; text-decoration:none !important; cursor:pointer; text-align:center; zoom:1; overflow:visible; }
+button:hover                           { border: 1px solid #999999; background: #dadada url(images/ui-bg_glass_75_dadada_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #212121; }
+button:active                          { border: 1px solid #aaaaaa; background: #ffffff url(images/ui-bg_glass_65_ffffff_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #212121; }
+button .ui-icon                        { background-image: url(images/ui-icons_888888_256x240.png); display:inline-block; vertical-align:text-top; }
+button:hover .ui-icon                  { background-image: url(images/ui-icons_454545_256x240.png); }
+fieldset                               { border: 1px solid #ccc; margin: 0 0 1.5em 0; padding: 1.4em; }
+legend                                 { padding: 0 .4em; font-size:1.2em;}
+label                                  { float:left; margin-right:1em; text-align:left; cursor:hand; display:block; }
+textarea, input, select, label, button, optgroup { margin-top:5px; }
+input[type="checkbox"],input[type="radio"] { margin-bottom:7px; }
+
+/**************************************/
+/*          DATA GRID TABLE           */
+/**************************************/
+/* A6849E,B4999E,D0B5A6,E6D7AD,C0D1A3 */
+
+#GridResults                          { width:100%; }
+#loader                               { width:32px; height:32px; display:block; margin: 1em auto; }
+.loader                               { width:32px; height:32px; display:inline-block; vertical-align:middle; margin:auto 1em; background: #FFF url(../../../img/load.gif) }
+.hide                                 { display:none; }
+.grid                                 { background: #FFF; border: 0px; margin-top:1em; width:100%; }
+table.grid thead                      { border-top: 1px solid #CCC;  border-left: 1px solid #CCC; }
+table.grid tfoot td                   { border: 0px; background: #FFF; padding:0; }
+table.grid tbody                      { border-top: 1px solid #CCC;  border-left: 1px solid #CCC; }
+table.grid thead th                   { border-bottom: 1px solid #CCC; border-right: 1px solid #CCC; background: #e6e6e6 url(images/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x; color: #666; padding:0.7em; }
+table.grid tbody tr td                { border-bottom: 1px solid #CCC; border-right: 1px solid #CCC; padding:0.6em; vertical-align:middle; color: #666; }
+table.grid tr.alt td                  { background: #EAE7DC; }
+table.grid tr.over td                 { background: #E7CCFC; color: #333; }
+table.grid tr.checked td              { background: #E7DCFC; }
+.verifica                             { background:url('../img/checkcross.png') top left no-repeat; height:15px; width:15px; margin: auto 0.2em; }
+.no-verifica                          { background:url('../img/checkcross.png') left -15px no-repeat; height:15px; width:15px; margin: auto 0.2em; }
+
+.vgrid                                { background-color: #FFF; border: 1px solid #CCC; }
+table.vgrid th                        { border: 1px solid #CCC; background-color:#E7DCFC; color: #003300; padding:0.7em; }
+table.vgrid td                        { border: 1px solid #CCC; padding:0.6em; }
+table.vgrid th.odd-th                 { background-color:#DEDEDE; }
+.odd-row                              { background-color:#EFEFEF; }
+
+/**************************************/
+/*             FORM STYLE             */
+/**************************************/
+
+.uniForm                               { width:100%; }
+.noBorder                              { border: 0px; }
+.uniForm legend                        { font-weight: bold; font-size: 100%; margin: 0; padding: 1.5em 0; }
+.uniForm label                         { color: #333; float:left; margin-right:1.4em; text-align:left; cursor:hand; font-size:0.9em; }
+.uniForm .ctrlHolder                   { padding: 1em; border-bottom: 1px solid #CCCCCC; clear:both; overflow:hidden; }
+.inputHolder                           { float:left; }
+.focused                               { background: #EFEFEF; }
+.uniForm .formHint                     { font-size: .85em; color: #777; }
+.uniForm .inlineLabels .formHint       { padding-top: .5em; }
+.uniForm .ctrlHolder.focused .formHint { color: #333; }
+.uniForm .ctrlHolder.error, .uniForm .ctrlHolder.focused.error     { background: #ffdfdf; border: 1px solid #f3afb5; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -o-border-radius: 4px; -khtml-border-radius: 4px; }
+.pieBtn                                { text-align:right; }
+.pieBtn button                         { margin-left:20px; padding:0.8em 1em; font-size:1.1em; }
+.error-form                            { height:16px; color:#DD3C10; background:url('../img/error_16.png') left center no-repeat; margin-left:10px; padding-left:20px; }
+#ui-datepicker-div                     { font-size:0.85em; }
+.error                                 { background: #ffdfdf; border: 1px solid #f3afb5; color:#900; padding:1em; }
+
+#login_box                             { width:400px; height:200px; display:block; position:absolute; top:50%; left:50%; margin-left:-200px; margin-top:-100px; background: #FFF url('../img/logo-registros.png') 9% 50% no-repeat; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; }
+#login_box form                        { width:200px; float:right; margin:10px 10px 0 0; }
+#login_box form label                  { color:#777; font-size:0.9em; }
+#login_box form input                  { width:170px; }
+#login_box form button                 { float:right; margin: 15px 20px; }
+
+/**************************************/
+/*          jBar Notificacion         */
+/**************************************/
+
+.jbar                                  { height:50px; width:100%; background-color: #fff; position:fixed; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=95); opacity: 0.95; -moz-opacity: 0.95; text-align:center; left:0px; z-index:9999999;  margin:0px; padding:0px; }
+.jbar-top                              { top:0px; border-top:2px solid #fff; border-bottom: 1px solid #ebebeb; }
+.jbar-bottom                           { bottom:0px; border-bottom:2px solid #fff; border-top: 1px solid #ebebeb; color:#777; }
+.jbar-content                          { line-height:46px; font-size: 18px; }
+a.jbar-cross                           { position:absolute; width:31px; height:31px; background:transparent url('../images/cross.png') no-repeat top left; cursor:pointer; right:10px; }
+a.jbar-cross:hover                     { background-image: url('../img/cross_hover.png') }
+.jbar-top a.jbar-cross                 { top:8px; }
+.jbar-bottom a.jbar-cross              { bottom:8px; }
+
