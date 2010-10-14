@@ -21,7 +21,7 @@ input[type="checkbox"],input[type="radio"] { margin-bottom:7px; }
 
 #GridResults                          { width:100%; }
 #loader                               { width:32px; height:32px; display:block; margin: 1em auto; }
-.loader                               { width:32px; height:32px; display:inline-block; vertical-align:middle; margin:auto 1em; background: #FFF url(../../../img/load.gif) }
+.loader                               { width:32px; height:32px; display:inline-block; vertical-align:middle; margin:auto 1em; background: #FFF url(../img/load.gif) }
 .hide                                 { display:none; }
 .grid                                 { background: #FFF; border: 0px; margin-top:1em; width:100%; }
 table.grid thead                      { border-top: 1px solid #CCC;  border-left: 1px solid #CCC; }
@@ -77,7 +77,7 @@ table.vgrid th.odd-th                 { background-color:#DEDEDE; }
 .jbar-bottom                           { bottom:0px; border-bottom:2px solid #fff; border-top: 1px solid #ebebeb; color:#777; }
 .jbar-content                          { line-height:46px; font-size: 18px; }
 a.jbar-cross                           { position:absolute; width:31px; height:31px; background:transparent url('../images/cross.png') no-repeat top left; cursor:pointer; right:10px; }
-a.jbar-cross:hover                     { background-image: url('../img/cross_hover.png') }
+a.jbar-cross:hover                     { background-image: url(../img/cross_hover.png) }
 .jbar-top a.jbar-cross                 { top:8px; }
 .jbar-bottom a.jbar-cross              { bottom:8px; }
 

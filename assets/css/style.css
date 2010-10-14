@@ -19,7 +19,7 @@ html, body                             { height:100%; width:100%; margin:0; padd
 
 .contenedor                            { position:relative; min-height:100%; height:auto !important; height:100%; overflow:hidden; }
 #contenido                             { min-width:960px; margin:38px auto 70px auto; }
-.main_gradient                         { background:#FFF url('../img/body_gradient.png') 0px 100px repeat-x; }
+.main_gradient                         { background:#FFF url(../img/body_gradient.png) 0px 100px repeat-x; }
 .login_bg                              { background: #333 url(../img/bg.gif) top left repeat; }
 
 #footer                                { position:absolute; width:100%; bottom:0; height:40px; background:#EBEBEB url(../img/footer_main.png) top left repeat-x; }
