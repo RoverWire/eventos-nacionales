@@ -9,9 +9,11 @@ class Welcome extends Controller {
 	
 	function index()
 	{
-		$this->load->view('welcome_message');
+		$this->load->library('Template');
+		$this->template->render();
+		
 	}
 }
 
 /* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */
+/* Location: ./system/application/controllers/welcome.php */

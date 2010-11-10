@@ -24,9 +24,10 @@ color:				#990000;
 margin: 			0 0 4px 0;
 }
 </style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 <body>
-	<div id="content">
+  <div id="content">
 		<h1><?php echo $heading; ?></h1>
 		<?php echo $message; ?>
 	</div>

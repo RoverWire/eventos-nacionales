@@ -20,9 +20,10 @@
 |
 | 1. Libraries
 | 2. Helper files
-| 3. Custom config files
-| 4. Language files
-| 5. Models
+| 3. Plugins
+| 4. Custom config files
+| 5. Language files
+| 6. Models
 |
 */
 
@@ -31,14 +32,14 @@
 |  Auto-load Libraries
 | -------------------------------------------------------------------
 | These are the classes located in the system/libraries folder
-| or in your application/libraries folder.
+| or in your system/application/libraries folder.
 |
 | Prototype:
 |
 |	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
 */
 
-$autoload['libraries'] = array();
+$autoload['libraries'] = array('database', 'Template', 'Session', 'Form_validation', 'Pagination');
 
 
 /*
@@ -50,7 +51,19 @@ $autoload['libraries'] = array();
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array();
+$autoload['helper'] = array('url', 'archivo', 'ruta', 'form', 'jgritter');
+
+
+/*S
+| -------------------------------------------------------------------
+|  Auto-load Plugins
+| -------------------------------------------------------------------
+| Prototype:
+|
+|	$autoload['plugin'] = array('captcha', 'js_calendar');
+*/
+
+$autoload['plugin'] = array();
 
 
 /*
@@ -100,4 +113,4 @@ $autoload['model'] = array();
 
 
 /* End of file autoload.php */
-/* Location: ./application/config/autoload.php */
+/* Location: ./system/application/config/autoload.php */
