@@ -11,7 +11,7 @@
 |	http://example.com/
 |
 */
-$config['base_url']	= "http://".$_SERVER["HTTP_HOST"]."/registro/";
+$config['base_url']	= "http://".$_SERVER["HTTP_HOST"]."/";
 
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +25,7 @@ $config['base_url']	= "http://".$_SERVER["HTTP_HOST"]."/registro/";
 */
 $config['index_page']    = "index.php";
 
-$config['relative_path'] = "/registro/";          
+$config['relative_path'] = "/";          
 
 /*
 |--------------------------------------------------------------------------
