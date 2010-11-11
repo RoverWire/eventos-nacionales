@@ -53,7 +53,7 @@ class registros extends Controller{
 			
 			if($this->form_validation->run())
 			{
-				if($this->registro->seisena_nueva($this->input->post('scouter'), $this->input->post('lobato')))
+				if($this->registro->grupo_nuevo($this->input->post('scouter'), $this->input->post('lobato')))
 				{
 					redirect('registros/paso2/'.$this->input->post('scouter'));
 				}
@@ -93,7 +93,19 @@ class registros extends Controller{
 		$this->template->render();
 	}
 	
-	public function paso3($cum = '', $campo = '')
+	public function paso3($cum = '')
+	{
+		if(empty($cum) OR strlen($cum) != 10)
+		{
+			redirect('registros');
+		}
+		
+		$this->template->write('content', '<h1 class="titulo_seccion">Asignar Campo</h1>');
+		$this->template->add_js('assets/js/jquery.zebragrid.js');
+		$this->template->render();
+	}
+	
+	public function paso3_old($cum = '', $campo = '')
 	{
 		if(empty($cum) OR strlen($cum) != 10)
 		{

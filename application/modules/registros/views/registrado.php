@@ -13,9 +13,6 @@
 	</div>
     
 </form>
-<div id="modal">
-    ¿Desea eliminar el o los elementos seleccionados?
-</div>
 <script type="text/javascript">
 $(function() {
 	$('#btn_cancelar').click(function(){
@@ -32,7 +29,7 @@ $(function() {
 		$.post('<?php echo ruta('registros/scouter'); ?>', { cum:cum_scouter }, function(data){
 			if(data.cum){
 				$.gritter.add({
-					image: '<?php echo relative_root('img/error_64.png'); ?>',
+					image: '<?php echo relative_root('assets/img/error_64.png'); ?>',
 					title: 'Verificar Membresía',
 					text : data.cum
 				});

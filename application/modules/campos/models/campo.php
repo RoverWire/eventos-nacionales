@@ -20,4 +20,16 @@ class campo extends MY_Model {
 		$this->resultado = $this->db->get();
 		return $this->asignar_registro();
 	}
+	
+	public function actualizar_ocupacion()
+	{
+		$this->resultado = $this->db->get('campos');
+		$this->asignar_registro();
+		$cam = array();
+		$total = array();
+		for ($i=0; $i < $this->numero_registros; $i++) { 
+			$cam[$i] = $this->idcampo;
+			$this->siguiente();
+		}
+	}
 }

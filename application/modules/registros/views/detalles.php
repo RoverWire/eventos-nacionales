@@ -1,4 +1,4 @@
-<h1 class="titulo_seccion">Detalles de la Seisena</h1>
+<h1 class="titulo_seccion">Detalles del Grupo</h1>
 <form cform class="uniForm" action="" method="post" enctype="multipart/form-data" name="formCUM" id="formCUM">
   <table class="vgrid" width="100%" cols="2">
     <tr>
@@ -81,7 +81,7 @@
 	 ?>
     <div class="pieBtn">
 		<button id="btn_asignar" type="button"><span class="ui-icon ui-icon-check"></span> Asignar Campo</button>
-        <button id="btn_modificar" type="button"><span class="ui-icon ui-icon-pencil"></span> Modificar Seisena</button>
+        <button id="btn_modificar" type="button"><span class="ui-icon ui-icon-pencil"></span> Modificar Grupo</button>
         <button id="btn_regresar" type="button"><span class="ui-icon ui-icon-arrowthick-1-w"></span> Regresar</button>
 	</div>
 </form>
