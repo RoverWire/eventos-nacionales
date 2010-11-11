@@ -252,8 +252,8 @@ class usuarios extends Controller
 	public function inicio()
 	{
 		$this->template->write('sidebar', '', TRUE);
-		$this->template->write('sidebar', '<li><a href="'.ruta('registros').'"><span class="icon_lateral icon_registro"></span><u>Nueva Seisena</u> <br /><small>agregar nuevas seisenas</small></a></li>');
-		$this->template->write('sidebar', '<li><a href="'.ruta('registros/preregistro').'"><span class="icon_lateral icon_buscar"></span><u>Seisena Preregistrada</u> <br /><small>buscar por cum de scouter</small></a></li>');
+		$this->template->write('sidebar', '<li><a href="'.ruta('registros').'"><span class="icon_lateral icon_registro"></span><u>Nuevo Grupo</u> <br /><small>agregar grupo de participantes</small></a></li>');
+		$this->template->write('sidebar', '<li><a href="'.ruta('registros/preregistro').'"><span class="icon_lateral icon_buscar"></span><u>Grupo Preregistrado</u> <br /><small>buscar por cum de scouter</small></a></li>');
 		# $this->template->write('sidebar', '<li><a href="'.ruta('ajustes/editar').'"><span class="icon_lateral icon_credencial"></span><u>Configurar</u> <br /><small>editar parámetros de la herramienta</small></a></li>');
 		
 		$this->template->write_view('content', 'panel');

@@ -133,6 +133,34 @@ class Registro extends MY_Model {
 		}
 	}
 	
+	public function grupo_nuevo($scouter, $elemento)
+	{
+		if(is_array($elemento) && ! empty($scouter))
+		{
+			$this->db->select("cum");
+			$this->db->from('regnal');
+			$this->db->where_in('cum', $elemento);
+			$this->resultado = $this->db->get();
+			$this->asignar_registro();
+			$scouter = strtoupper($scouter);
+			
+			$this->db->trans_start();
+			for($i=0; $i<$this->numero_registros; $i++)
+			{
+				$insertar = array('cum' => $this->cum, 'responsable' => $scouter);
+				$this->db->insert('participantes', $insertar);
+				$this->siguiente();
+			}
+			$this->db->trans_complete();
+			
+			return $this->db->trans_status();
+		}
+		else
+		{
+			return FALSE;
+		}
+	}
+	
 	public function agregar_lobato($scouter, $elemento)
 	{
 		$this->db->select("cum, YEAR(CURDATE())-YEAR(nacimiento) + IF(DATE_FORMAT(CURDATE(),'%m-%d') > DATE_FORMAT(nacimiento,'%m-%d'), 0, -1) AS edad", FALSE);

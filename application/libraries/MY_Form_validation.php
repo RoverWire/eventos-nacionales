@@ -33,6 +33,7 @@ class MY_Form_validation extends CI_Form_validation{
 		$CI->db->select('cum');
 		$CI->db->from('pagos');
 		$CI->db->where('cum', $str);
+		$CI->db->or_where('cambio', $str);
 		$CI->db->limit(1);
 		$resultado = $CI->db->get();
 		$existe = ($resultado->num_rows() > 0) ? TRUE:FALSE;
@@ -77,6 +78,23 @@ class MY_Form_validation extends CI_Form_validation{
 		$CI->db->limit(1);
 		$resultado = $CI->db->get();
 		$existe = ($resultado->num_rows() > 0) ? FALSE:TRUE;
+		$resultado->free_result();
+		return $existe;
+	}
+	
+	function es_muchacho($str)
+	{
+		$CI =& get_instance();
+		$CI->db->select('cum');
+		$CI->db->from('regnal');
+		$CI->db->where('cum', $str);
+		$CI->db->like('nivel', 'LOBATO');
+		$CI->db->or_like('nivel', 'SCOUT ', 'after');
+		$CI->db->or_like('nivel', 'CAMINANTE');
+		$CI->db->or_like('nivel', 'ROVER');
+		$CI->db->limit(1);
+		$resultado = $CI->db->get();
+		$existe = ($resultado->num_rows() == 1) ? TRUE:FALSE;
 		$resultado->free_result();
 		return $existe;
 	}

@@ -24,8 +24,9 @@ $lang['scout_vigente']      = "La membresía está vencida o no existe.";
 $lang['pago_evento']        = "El CUM no cuenta con pago al evento.";
 $lang['nivel_valido']       = "No tiene un cargo permitido para ser adulto responsable.";
 $lang['scouter_registrado'] = "El scouter ya se encuentra registrado en el evento.";
-$lang['lobato_registrado']  = "El lobato ya se encuentra registrado en el evento.";
+$lang['lobato_registrado']  = "El muchacho ya se encuentra registrado en el evento.";
 $lang['es_lobato']          = "No se encuentra registrado como Lobato / Lobezna.";
+$lang['es_muchacho']        = "El %s no se encuentra registrado como elemento.";
 
 
 /* End of file form_validation_lang.php */

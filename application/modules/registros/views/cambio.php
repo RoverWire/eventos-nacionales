@@ -29,7 +29,7 @@ $(function() {
 		$.post('<?php echo ruta('registros/cambio_scouter'); ?>', { cum:cum_scouter, anterior:'<?php echo $cum; ?>' }, function(data){
 			if(data.cum){
 				$.gritter.add({
-					image: '<?php echo relative_root('img/error_64.png'); ?>',
+					image: '<?php echo relative_root('assets/img/error_64.png'); ?>',
 					title: 'Verificar Membresía',
 					text : data.cum
 				});

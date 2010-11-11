@@ -50,6 +50,7 @@ table.vgrid th.odd-th                 { background-color:#DEDEDE; }
 .uniForm legend                        { font-weight: bold; font-size: 100%; margin: 0; padding: 1.5em 0; }
 .uniForm label                         { color: #333; float:left; margin-right:1.4em; text-align:left; cursor:hand; font-size:0.9em; }
 .uniForm .ctrlHolder                   { padding: 1em; border-bottom: 1px solid #CCCCCC; clear:both; overflow:hidden; }
+.uniForm .ctrlHolderLast               { padding: 1em; clear:both; overflow:hidden; }
 .inputHolder                           { float:left; }
 .focused                               { background: #EFEFEF; }
 .uniForm .formHint                     { font-size: .85em; color: #777; }

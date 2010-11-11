@@ -7,8 +7,8 @@ class registros extends Controller{
 		$this->load->model('registro');
 		$this->load->model('campos/campo');
 		$this->load->model('campos/manada');
-		$this->template->write('sidebar', '<li><a href="'.ruta('registros').'"><span class="icon_lateral icon_registro"></span><u>Nueva Seisena</u> <br /><small>agregar nuevas seisenas</small></a></li>');
-		$this->template->write('sidebar', '<li><a href="'.ruta('registros/preregistro').'"><span class="icon_lateral icon_buscar"></span><u>Seisena Preregistrada</u> <br /><small>buscar por cum de scouter</small></a></li>');
+		$this->template->write('sidebar', '<li><a href="'.ruta('registros').'"><span class="icon_lateral icon_registro"></span><u>Nuevo Grupo</u> <br /><small>agregar grupo de participantes</small></a></li>');
+		$this->template->write('sidebar', '<li><a href="'.ruta('registros/preregistro').'"><span class="icon_lateral icon_buscar"></span><u>Grupo Preregistrado</u> <br /><small>buscar por cum de scouter</small></a></li>');
 	}
 	
 	public function index()
@@ -17,13 +17,38 @@ class registros extends Controller{
 		{
 			$this->form_validation->set_error_delimiters('<span class="error-form">', '</span>');
 			$this->form_validation->set_rules('scouter', 'CUM Scouter', 'trim|required|exact_length[10]|xss_clean|scout_vigente|nivel_valido|pago_evento|scouter_registrado');
-			$this->form_validation->set_rules('lobato[0]', 'Lobato 1',  'trim|required|exact_length[10]|xss_clean|scout_vigente|es_lobato|pago_evento|lobato_registrado');
-			$this->form_validation->set_rules('lobato[1]', 'Lobato 2',  'trim|required|exact_length[10]|xss_clean|scout_vigente|es_lobato|pago_evento|lobato_registrado');
-			$this->form_validation->set_rules('lobato[2]', 'Lobato 3',  'trim|required|exact_length[10]|xss_clean|scout_vigente|es_lobato|pago_evento|lobato_registrado');
-			$this->form_validation->set_rules('lobato[3]', 'Lobato 4',  'trim|required|exact_length[10]|xss_clean|scout_vigente|es_lobato|pago_evento|lobato_registrado');
-			$this->form_validation->set_rules('lobato[4]', 'Lobato 5',  'trim|required|exact_length[10]|xss_clean|scout_vigente|es_lobato|pago_evento|lobato_registrado');
+			$this->form_validation->set_rules('lobato[0]', 'Muchacho 1',  'trim|required|exact_length[10]|xss_clean|scout_vigente|es_muchacho|pago_evento|lobato_registrado');
+			
+			if($_POST['lobato'][1] != ''){
+				$this->form_validation->set_rules('lobato[1]', 'Muchacho 2',  'trim|exact_length[10]|xss_clean|scout_vigente|es_muchacho|pago_evento|lobato_registrado');
+			}
+			
+			if($_POST['lobato'][2] != ''){
+				$this->form_validation->set_rules('lobato[2]', 'Muchacho 3',  'trim|exact_length[10]|xss_clean|scout_vigente|es_muchacho|pago_evento|lobato_registrado');
+		    }
+		    
+		    if($_POST['lobato'][3] != ''){
+				$this->form_validation->set_rules('lobato[3]', 'Muchacho 4',  'trim|exact_length[10]|xss_clean|scout_vigente|es_muchacho|pago_evento|lobato_registrado');
+		    }
+		    
+		    if($_POST['lobato'][4] != ''){
+				$this->form_validation->set_rules('lobato[4]', 'Muchacho 5',  'trim|exact_length[10]|xss_clean|scout_vigente|es_muchacho|pago_evento|lobato_registrado');
+			}
+			
 			if($_POST['lobato'][5] != ''){
-				$this->form_validation->set_rules('lobato[5]', 'Lobato 6', 'trim|exact_length[10]|xss_clean|scout_vigente|es_lobato|pago_evento|lobato_registrado');
+				$this->form_validation->set_rules('lobato[5]', 'Muchacho 6', 'trim|exact_length[10]|xss_clean|scout_vigente|es_muchacho|pago_evento|lobato_registrado');
+			}
+			
+			if($_POST['lobato'][6] != ''){
+				$this->form_validation->set_rules('lobato[6]', 'Muchacho 7', 'trim|exact_length[10]|xss_clean|scout_vigente|es_muchacho|pago_evento|lobato_registrado');
+			}
+			
+			if($_POST['lobato'][7] != ''){
+				$this->form_validation->set_rules('lobato[7]', 'Muchacho 8', 'trim|exact_length[10]|xss_clean|scout_vigente|es_muchacho|pago_evento|lobato_registrado');
+			}
+			
+			if($_POST['lobato'][8] != ''){
+				$this->form_validation->set_rules('lobato[8]', 'Muchacho 9', 'trim|exact_length[10]|xss_clean|scout_vigente|es_muchacho|pago_evento|lobato_registrado');
 			}
 			
 			if($this->form_validation->run())
@@ -35,11 +60,11 @@ class registros extends Controller{
 			}
 		}
 		
-		$this->template->add_js('js/jquery.gritter.min.js');
-		$this->template->add_css('temas/registro/css/jquery.gritter.css');
-		$this->template->add_js('js/jquery.uniform.js');
+		$this->template->add_js('assets/js/jquery.gritter.min.js');
+		$this->template->add_css('assets/css/jquery.gritter.css');
+		$this->template->add_js('assets/js/jquery.uniform.js');
 		
-		$this->template->write('content', '<h1 class="titulo_seccion">Nueva Seisena</h1>');
+		$this->template->write('content', '<h1 class="titulo_seccion">Nuevo Grupo</h1>');
 		$this->template->write_view('content', 'nuevo');
 		$this->template->render();	
 	}
@@ -90,7 +115,7 @@ class registros extends Controller{
 		}
 		
 		
-		$this->template->add_js('js/jquery.zebragrid.js');
+		$this->template->add_js('assets/js/jquery.zebragrid.js');
 		$this->template->write('content', '<h1 class="titulo_seccion">Asignar Manada</h1>');
 		$this->campo->consultar();
 		$this->template->write_view('content', 'campos');
@@ -118,9 +143,9 @@ class registros extends Controller{
 	
 	public function preregistro()
 	{
-		$this->template->add_js('js/jquery.gritter.min.js');
-		$this->template->add_css('temas/registro/css/jquery.gritter.css');
-		$this->template->add_js('js/jquery.uniform.js');
+		$this->template->add_js('assets/js/jquery.gritter.min.js');
+		$this->template->add_css('assets/css/jquery.gritter.css');
+		$this->template->add_js('assets/js/jquery.uniform.js');
 		$this->template->write('content', '<h1 class="titulo_seccion">Buscar Seisena Preregistrada</h1>');
 		$this->template->write_view('content', 'registrado');
 		$this->template->render();
@@ -148,9 +173,9 @@ class registros extends Controller{
 	
 	public function cambiar_scouter($cum)
 	{
-		$this->template->add_js('js/jquery.gritter.min.js');
-		$this->template->add_css('temas/registro/css/jquery.gritter.css');
-		$this->template->add_js('js/jquery.uniform.js');
+		$this->template->add_js('assets/js/jquery.gritter.min.js');
+		$this->template->add_css('assets/css/jquery.gritter.css');
+		$this->template->add_js('assets/js/jquery.uniform.js');
 		
 		$this->template->write('content', '<h1 class="titulo_seccion">Cambio de Scouter Responsable</h1>');
 		$datos = array('cum' => $cum);
@@ -206,10 +231,10 @@ class registros extends Controller{
 		}
 		
 		
-		$this->template->add_js('js/jquery.gritter.min.js');
-		$this->template->add_css('temas/registro/css/jquery.gritter.css');
-		$this->template->add_js('js/jquery.uniform.js');
-		$this->template->add_js('js/jquery.zebragrid.js');
+		$this->template->add_js('assets/js/jquery.gritter.min.js');
+		$this->template->add_css('assets/css/jquery.gritter.css');
+		$this->template->add_js('assets/js/jquery.uniform.js');
+		$this->template->add_js('assets/js/jquery.zebragrid.js');
 		
 		$this->template->write('content', '<h1 class="titulo_seccion">Modificar Seisena</h1>');
 		$this->registro->detalles($cum);
