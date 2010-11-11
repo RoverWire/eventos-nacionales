@@ -5,18 +5,18 @@
 <title>Registro Nacional</title>
 <?php echo $header; ?>
 
-<link rel="stylesheet" type="text/css" href="<?php echo $site_root; ?>temas/registro/css/reset.css" media="screen" /> 
-<link rel="stylesheet" type="text/css" href="<?php echo $site_root; ?>temas/registro/css/text.css" media="screen" /> 
-<link rel="stylesheet" type="text/css" href="<?php echo $site_root; ?>temas/registro/css/grid.css" media="screen" /> 
-<link rel="stylesheet" type="text/css" href="<?php echo $site_root; ?>temas/registro/css/style.css" media="screen" />
-<link rel="stylesheet" type="text/css" href="<?php echo $site_root; ?>temas/registro/css/uniform.css" media="screen" />
-<link rel="stylesheet" type="text/css" href="<?php echo $site_root; ?>temas/registro/css/jquery-ui.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="<?php echo $site_root; ?>assets/css/reset.css" media="screen" /> 
+<link rel="stylesheet" type="text/css" href="<?php echo $site_root; ?>assets/css/text.css" media="screen" /> 
+<link rel="stylesheet" type="text/css" href="<?php echo $site_root; ?>assets/css/grid.css" media="screen" /> 
+<link rel="stylesheet" type="text/css" href="<?php echo $site_root; ?>assets/css/style.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="<?php echo $site_root; ?>assets/css/uniform.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="<?php echo $site_root; ?>assets/css/jquery-ui.css" media="screen" />
 <?php echo $_styles; ?>
 
 <!--[if IE 6]><link rel="stylesheet" type="text/css" href="<?php echo $site_root; ?>temas/registro/css/ie6.css" media="screen" /><![endif]--> 
 <!--[if IE 7]><link rel="stylesheet" type="text/css" href="<?php echo $site_root; ?>temas/registro/css/ie.css" media="screen" /><![endif]-->
-<script type="text/javascript" src="<?php echo $site_root; ?>js/jquery.min.js"></script>
-<script type="text/javascript" src="<?php echo $site_root; ?>js/jquery-ui.js"></script>
+<script type="text/javascript" src="<?php echo $site_root; ?>assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="<?php echo $site_root; ?>assets/js/jquery-ui.js"></script>
 <?php echo $_scripts; ?>
 
 </head>

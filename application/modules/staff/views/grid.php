@@ -10,7 +10,7 @@
                 <td><?php echo $this->servicio->nombre; ?></td>
                 <td><?php echo $this->servicio->provincia; ?></td>
                 <td align="center"><?php echo $this->servicio->grupo; ?></td>
-                <td align="center"><a href="<?php echo $site_base, 'staff/ficha/', $this->servicio->id; ?>"><img src="<?php echo $site_root, 'img/onebit_39.png'; ?>" alt="Ficha" title="Ficha" width="16" height="16" border="0" align="absbottom" /></a></td>
+                <td align="center"><a href="<?php echo $site_base, 'staff/ficha/', $this->servicio->id; ?>"><img src="<?php echo $site_root, 'assets/img/onebit_39.png'; ?>" alt="Ficha" title="Ficha" width="16" height="16" border="0" align="absbottom" /></a></td>
             </tr>
         <?php
             $this->servicio->siguiente();

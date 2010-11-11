@@ -19,14 +19,14 @@ class regnal extends Controller
 		$config['cur_page']   = 0; 
 		$this->pagination->initialize($config); 
 
-		$this->template->add_js('js/jquery.gritter.min.js');
-		$this->template->add_js('js/jquery.ajaxify.min.js');
-		$this->template->add_js('js/jquery.simplemodal.js');
-		$this->template->add_js('js/fancybox/jquery.mousewheel-3.0.2.pack.js');
-		$this->template->add_js('js/fancybox/jquery.fancybox-1.3.1.js');
-		$this->template->add_js('js/jquery.zebragrid.js');
+		$this->template->add_js('assets/js/jquery.gritter.min.js');
+		$this->template->add_js('assets/js/jquery.ajaxify.min.js');
+		$this->template->add_js('assets/js/jquery.simplemodal.js');
+		$this->template->add_js('assets/js/fancybox/jquery.mousewheel-3.0.2.pack.js');
+		$this->template->add_js('assets/js/fancybox/jquery.fancybox-1.3.1.js');
+		$this->template->add_js('assets/js/jquery.zebragrid.js');
 		$this->template->add_css('temas/registro/css/jquery.gritter.css');
-		$this->template->add_css('js/fancybox/jquery.fancybox-1.3.1.css');
+		$this->template->add_css('assets/js/fancybox/jquery.fancybox-1.3.1.css');
 		$this->template->write_view('content', 'consulta');
 		$this->template->render();
 	}
@@ -84,7 +84,7 @@ class regnal extends Controller
 				{
 					$msg['title'] = 'Miembro Agregado';
 					$msg['text']  = sprintf('El miembro %s ha sido agregado al listado del REGNAL.', $datos['nombre']);
-					$msg['image'] = relative_root('img/checkmark_64.png');
+					$msg['image'] = relative_root('assets/img/checkmark_64.png');
 					$dialog = jgritter_script($msg);
 					$this->session->set_flashdata('extrascript', $dialog);
 					redirect('regnal');
@@ -98,7 +98,7 @@ class regnal extends Controller
 		
 		$datos['provincia'] = $this->miembro->combo_provincias($datos['provincia']);
 		$datos['nivel'] = $this->miembro->combo_nivel($datos['nivel']);
-		$this->template->add_js('js/jquery.uniform.js');
+		$this->template->add_js('assets/js/jquery.uniform.js');
 		$this->template->write('content', '<h1 class="titulo_seccion">Nuevo Miembro</h1>');
 		$this->template->write_view('content', 'form', $datos);
 		$this->template->render();
@@ -123,7 +123,7 @@ class regnal extends Controller
 				{
 					$msg['title'] = 'Miembro Actualizado';
 					$msg['text']  = sprintf('El miembro %s ha sido actualizado en el listado del REGNAL.', $datos['nombre']);
-					$msg['image'] = relative_root('img/checkmark_64.png');
+					$msg['image'] = relative_root('assets/img/checkmark_64.png');
 					$dialog = jgritter_script($msg);
 					$this->session->set_flashdata('extrascript', $dialog);
 					redirect('regnal');
@@ -139,7 +139,7 @@ class regnal extends Controller
 		
 		$datos['provincia'] = $this->miembro->combo_provincias($datos['provincia']);
 		$datos['nivel'] = $this->miembro->combo_nivel($datos['nivel']);
-		$this->template->add_js('js/jquery.uniform.js');
+		$this->template->add_js('assets/js/jquery.uniform.js');
 		$this->template->write('content', '<h1 class="titulo_seccion">Modificar Miembro</h1>');
 		$this->template->write_view('content', 'form', $datos);
 		$this->template->render();

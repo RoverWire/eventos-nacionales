@@ -8,7 +8,7 @@
                 <td><?php echo $this->usuario->usuario; ?></td>
                 <td><?php echo $this->usuario->nombre; ?></td>
                 <td><?php echo ($this->usuario->tipo == 1) ? 'Dirigente Nacional':'Usuario de Registros'; ?></td>
-              <td align="center"><a href="<?php echo $site_base, 'usuarios/editar/', $this->usuario->id; ?>"><img src="<?php echo $site_root, 'img/onebit_20.png'; ?>" alt="Editar" title="Editar" width="16" height="16" border="0" align="absbottom" /></a></td>
+              <td align="center"><a href="<?php echo $site_base, 'usuarios/editar/', $this->usuario->id; ?>"><img src="<?php echo $site_root, 'assets/img/onebit_20.png'; ?>" alt="Editar" title="Editar" width="16" height="16" border="0" align="absbottom" /></a></td>
             </tr>
         <?php
             $this->usuario->siguiente();

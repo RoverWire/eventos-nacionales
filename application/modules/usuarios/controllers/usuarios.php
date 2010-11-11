@@ -19,11 +19,11 @@ class usuarios extends Controller
 		$config['cur_page']   = 0; 
 		$this->pagination->initialize($config);
 		
-		$this->template->add_js('js/jquery.ajaxify.min.js');
-		$this->template->add_js('js/jquery.simplemodal.js');
-		$this->template->add_js('js/jquery.zebragrid.js');
-		$this->template->add_js('js/jquery.gritter.min.js');
-		$this->template->add_css('temas/registro/css/jquery.gritter.css');
+		$this->template->add_js('assets/js/jquery.ajaxify.min.js');
+		$this->template->add_js('assets/js/jquery.simplemodal.js');
+		$this->template->add_js('assets/js/jquery.zebragrid.js');
+		$this->template->add_js('assets/js/jquery.gritter.min.js');
+		$this->template->add_css('assets/css/jquery.gritter.css');
 		$this->template->write('content', '<h1 class="titulo_seccion">Usuarios</h1>');
 		$this->template->write_view('content', 'consulta');
 		$this->template->render();
@@ -79,7 +79,7 @@ class usuarios extends Controller
 				{
 					$msg['title'] = 'Usuario Agregado';
 					$msg['text']  = sprintf('El usuario %s ha sido agregado al listado de usuarios del sistema.', $datos['nombre']);
-					$msg['image'] = relative_root('img/checkmark_64.png');
+					$msg['image'] = relative_root('assets/img/checkmark_64.png');
 					$dialog = jgritter_script($msg);
 					$this->session->set_flashdata('extrascript', $dialog);
 					redirect('usuarios');
@@ -92,7 +92,7 @@ class usuarios extends Controller
 		}
 		$this->template->write('content', '<h1 class="titulo_seccion">Agregar usuario nuevo</h1>');
 		$this->template->write_view('content', 'form', $datos);
-		$this->template->add_js('/js/jquery.uniform.js');
+		$this->template->add_js('assets/js/jquery.uniform.js');
 		$this->template->render();
 	}
 	
@@ -120,7 +120,7 @@ class usuarios extends Controller
 				{
 					$msg['title'] = 'Usuario Actualizado';
 					$msg['text']  = sprintf('El usuario %s ha sido actualizado en el listado de usuarios del sistema.', $datos['nombre']);
-					$msg['image'] = relative_root('img/checkmark_64.png');
+					$msg['image'] = relative_root('assets/img/checkmark_64.png');
 					$dialog = jgritter_script($msg);
 					$this->session->set_flashdata('extrascript', $dialog);
 					if($this->session->userdata('ses_idusuario') == $id)
@@ -139,7 +139,7 @@ class usuarios extends Controller
 		}
 		$this->template->write('content', '<h1 class="titulo_seccion">Editar datos de usuario</h1>');
 		$this->template->write_view('content', 'form', $datos);
-		$this->template->add_js('js/jquery.uniform.js');
+		$this->template->add_js('assets/js/jquery.uniform.js');
 		$this->template->render();
 	}
 	
@@ -150,7 +150,7 @@ class usuarios extends Controller
 		{
 			$this->form_validation->set_error_delimiters('<span class="error-form">', '</span>');
 			$this->form_validation->set_rules('Datos[nombre]', 'Nombre', 'trim|required|xss_clean');
-			if( ! empty($datos['pass']))
+			if( ! empty($_POST['Datos']['pass']))
 			{
 				$this->form_validation->set_rules('Datos[pass]', 'Contraseña', 'trim|required|min_length[8]|max_length[15]|matches[repetir]|md5');
 				$this->form_validation->set_rules('repetir', 'Repetir contraseña', 'trim|required|min_length[8]|max_length[15]');
@@ -166,10 +166,10 @@ class usuarios extends Controller
 				{
 					$msg['title'] = 'Cuenta Actualizada';
 					$msg['text']  = sprintf('Los datos de su cuenta han sido actualizados.');
-					$msg['image'] = relative_root('img/checkmark_64.png');
+					$msg['image'] = relative_root('assets/img/checkmark_64.png');
 					$script = '$(function() { '.jgritter_script($msg).'});';
-					$this->template->add_js('js/jquery.gritter.min.js');
-		            $this->template->add_css('temas/registro/css/jquery.gritter.css');
+					$this->template->add_js('assets/js/jquery.gritter.min.js');
+		            $this->template->add_css('assets/css/jquery.gritter.css');
 					$this->template->add_js($script, 'embed');
 					$this->session->set_userdata('ses_nombre', $_POST['Datos']['nombre']);
 				}
@@ -180,7 +180,7 @@ class usuarios extends Controller
 		$c = array('id' => $id);
 		$this->usuario->consultar($c);
 		$datos = $this->usuario->datos[0];
-		$this->template->add_js('js/jquery.uniform.js');
+		$this->template->add_js('assets/js/jquery.uniform.js');
 		$this->template->write('content', '<h1 class="titulo_seccion">Información de Cuenta</h1>');
 		$this->template->write_view('content', 'cuenta', $datos);
 		$this->template->render();
@@ -254,7 +254,7 @@ class usuarios extends Controller
 		$this->template->write('sidebar', '', TRUE);
 		$this->template->write('sidebar', '<li><a href="'.ruta('registros').'"><span class="icon_lateral icon_registro"></span><u>Nueva Seisena</u> <br /><small>agregar nuevas seisenas</small></a></li>');
 		$this->template->write('sidebar', '<li><a href="'.ruta('registros/preregistro').'"><span class="icon_lateral icon_buscar"></span><u>Seisena Preregistrada</u> <br /><small>buscar por cum de scouter</small></a></li>');
-		$this->template->write('sidebar', '<li><a href="'.ruta('ajustes/editar').'"><span class="icon_lateral icon_credencial"></span><u>Configurar</u> <br /><small>editar parámetros de la herramienta</small></a></li>');
+		# $this->template->write('sidebar', '<li><a href="'.ruta('ajustes/editar').'"><span class="icon_lateral icon_credencial"></span><u>Configurar</u> <br /><small>editar parámetros de la herramienta</small></a></li>');
 		
 		$this->template->write_view('content', 'panel');
 		$this->template->render();

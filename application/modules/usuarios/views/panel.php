@@ -5,4 +5,3 @@
 <a href="<?php echo $site_root; ?>campos/" class="dash_option"><span class="dash_icon dash_icon_campos"></span> Campos</a>
 <a href="<?php echo $site_root; ?>regnal/" class="dash_option"><span class="dash_icon dash_icon_membresia"></span> Membresía</a>
 <a href="<?php echo $site_root; ?>usuarios/" class="dash_option"><span class="dash_icon dash_icon_usuarios"></span> Usuarios</a>
-<a href="<?php echo $site_root; ?>ajustes/" class="dash_option"><span class="dash_icon dash_icon_ajustes"></span> Ajustes</a>

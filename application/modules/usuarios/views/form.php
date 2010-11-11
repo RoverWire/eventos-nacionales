@@ -1,4 +1,4 @@
-<form class="uniForm" name="usuario" id="usuario" action="" method="post" enctype="multipart/form-data">
+<form class="uniForm" name="usuarioForm" id="usuarioForm" action="" method="post" enctype="multipart/form-data">
 	<fieldset class="inlineLabels noBorder">
 		
 		<div class="ctrlHolder">
