@@ -54,9 +54,9 @@
 	  </table>
       
       <?php
-	  	if( ! empty($this->registro->idseisena))
+	  	if( ! empty($this->registro->idcampo))
 		{
-			$this->campo->ubicacion($this->registro->scouter_cum);
+			$this->campo->ubicacion2($this->registro->scouter_cum);
 	  ?>
       <h2>Acampado Asignado</h2>
       
@@ -64,15 +64,11 @@
           <thead>
           <tr>
             <th scope="col">Campo</th>
-            <th scope="col">Manada</th>
-            <th scope="col">Seisena</th>
           </tr>
           </thead>
           <tbody>
           <tr>
-            <td align="center" width="34%"><?php echo $this->campo->nombre_campo; ?></td>
-            <td align="center" width="34%"><?php echo $this->campo->nombre_manada; ?></td>
-            <td align="center" width="34%"><?php echo $this->campo->nombre_seisena; ?></td>
+            <td align="center" width="34%"><?php echo $this->campo->nombre; ?></td>
           </tr>
           </tbody>
       </table>

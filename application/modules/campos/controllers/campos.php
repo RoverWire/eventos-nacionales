@@ -12,10 +12,10 @@ class campos extends Controller{
 	
 	public function index()
 	{
-		#$this->campo->consultar();
-		#$this->template->write_view('content', 'campos');
-		
 		$this->campo->actualizar_ocupacion();
+		$this->campo->consultar();
+		$this->template->write_view('content', 'campos');
+		$this->template->add_js('assets/js/jquery.zebragrid.js');
 		$this->template->render();
 	}
 	

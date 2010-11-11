@@ -16,7 +16,7 @@ class Registro extends MY_Model {
 	
 	public function detalles($scouter)
 	{
-		$this->db->select("p.idseisena, s.nombre AS scouter_nombre, s.grupo AS scouter_grupo, s.provincia AS scouter_provincia, s.cum AS scouter_cum, l.nombre AS lobato_nombre, l.grupo AS lobato_grupo, l.provincia AS lobato_provincia, l.cum AS lobato_cum, YEAR(CURDATE())-YEAR(l.nacimiento) + IF(DATE_FORMAT(CURDATE(),'%m-%d') > DATE_FORMAT(l.nacimiento,'%m-%d'), 0, -1) AS lobato_edad", FALSE);
+		$this->db->select("p.idseisena, p.idcampo, s.nombre AS scouter_nombre, s.grupo AS scouter_grupo, s.provincia AS scouter_provincia, s.cum AS scouter_cum, l.nombre AS lobato_nombre, l.grupo AS lobato_grupo, l.provincia AS lobato_provincia, l.cum AS lobato_cum, YEAR(CURDATE())-YEAR(l.nacimiento) + IF(DATE_FORMAT(CURDATE(),'%m-%d') > DATE_FORMAT(l.nacimiento,'%m-%d'), 0, -1) AS lobato_edad", FALSE);
 		$this->db->from('participantes AS p');
 		$this->db->join('regnal AS s', 'p.responsable = s.cum', 'LEFT');
 		$this->db->join('regnal AS l', 'p.cum = l.cum');
@@ -36,6 +36,12 @@ class Registro extends MY_Model {
 		$existe = ($this->numero_registros == 1) ? TRUE:FALSE;
 		$this->liberar_resultados();
 		return $existe; 
+	}
+	
+	public function asignar_campo($cum, $campo)
+	{
+		$this->db->where('responsable', $cum);
+		return $this->db->update('participantes', array('idcampo' => $campo));
 	}
 	
 	public function asignar_manada($cum, $idseisena)

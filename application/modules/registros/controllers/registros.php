@@ -100,8 +100,20 @@ class registros extends Controller{
 			redirect('registros');
 		}
 		
+		if($_POST)
+		{
+			$this->form_validation->set_rules('Campo', 'Campo', 'trim|required|xss_clean');
+			if($this->form_validation->run()){
+			    $this->registro->asignar_campo($cum, $this->input->post('Campo'));
+				redirect('registros/paso2/'.$cum);
+			}
+		}
+		
+		$this->campo->actualizar_ocupacion();
 		$this->template->write('content', '<h1 class="titulo_seccion">Asignar Campo</h1>');
 		$this->template->add_js('assets/js/jquery.zebragrid.js');
+		$this->campo->consultar();
+		$this->template->write_view('content', 'campos2');
 		$this->template->render();
 	}
 	
@@ -148,8 +160,8 @@ class registros extends Controller{
 			redirect('registros');
 		}
 		
-		$this->campo->ubicacion($cum);
-		$this->template->write_view('content', 'ubicacion');
+		#$this->campo->ubicacion($cum);
+		#$this->template->write_view('content', 'ubicacion');
 		$this->template->render();
 	}
 	
@@ -158,7 +170,7 @@ class registros extends Controller{
 		$this->template->add_js('assets/js/jquery.gritter.min.js');
 		$this->template->add_css('assets/css/jquery.gritter.css');
 		$this->template->add_js('assets/js/jquery.uniform.js');
-		$this->template->write('content', '<h1 class="titulo_seccion">Buscar Seisena Preregistrada</h1>');
+		$this->template->write('content', '<h1 class="titulo_seccion">Buscar Grupo Preregistrado</h1>');
 		$this->template->write_view('content', 'registrado');
 		$this->template->render();
 	}
@@ -248,7 +260,7 @@ class registros extends Controller{
 		$this->template->add_js('assets/js/jquery.uniform.js');
 		$this->template->add_js('assets/js/jquery.zebragrid.js');
 		
-		$this->template->write('content', '<h1 class="titulo_seccion">Modificar Seisena</h1>');
+		$this->template->write('content', '<h1 class="titulo_seccion">Modificar Grupo</h1>');
 		$this->registro->detalles($cum);
 		$this->template->write_view('content', 'modificar');
 		
