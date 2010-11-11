@@ -3,7 +3,7 @@
 		<strong>Filtrar:</strong>
 		<select name="campo" id="campo">
 			<option value="nombre">Nombre</option>
-			<option value="cum">CUM</option>
+			<option value="staff.cum">CUM</option>
             <option value="nivel">Nivel</option>
 		</select>
 		<select name="criterio" id="criterio">
