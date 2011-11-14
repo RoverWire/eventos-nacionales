@@ -89,7 +89,7 @@ class MY_Form_validation extends CI_Form_validation{
 		$CI->db->from('regnal');
 		$CI->db->where('cum', $str);
 		$CI->db->like('nivel', 'LOBATO');
-		$CI->db->or_like('nivel', 'SCOUT ', 'after');
+		$CI->db->or_like('nivel', 'SCOUT ');
 		$CI->db->or_like('nivel', 'CAMINANTE');
 		$CI->db->or_like('nivel', 'ROVER');
 		$CI->db->limit(1);
