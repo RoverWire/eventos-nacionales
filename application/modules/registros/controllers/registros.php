@@ -244,7 +244,7 @@ class registros extends Controller{
 			if($_POST['cum'])
 			{
 				$this->form_validation->set_error_delimiters('<span class="error-form">', '</span>');
-				$this->form_validation->set_rules('cum', 'CUM',  'trim|required|exact_length[10]|xss_clean|scout_vigente|es_lobato|pago_evento|lobato_registrado');
+				$this->form_validation->set_rules('cum', 'CUM',  'trim|required|exact_length[10]|xss_clean|scout_vigente|es_muchacho|pago_evento|lobato_registrado');
 				if($this->form_validation->run())
 				{
 					$this->registro->agregar_lobato($cum, $this->input->post('cum'));
