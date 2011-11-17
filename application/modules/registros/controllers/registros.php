@@ -8,6 +8,7 @@ class registros extends Controller{
 		$this->load->model('campos/campo');
 		$this->load->model('campos/manada');
 		$this->template->write('sidebar', '<li><a href="'.ruta('registros').'"><span class="icon_lateral icon_registro"></span><u>Nuevo Grupo</u> <br /><small>agregar grupo de participantes</small></a></li>');
+		$this->template->write('sidebar', '<li><a href="'.ruta('registros/permuta').'"><span class="icon_lateral icon_usuario"></span><u>Cambio de Pago</u> <br /><small>permuta de asistente o participante</small></a></li>');
 		$this->template->write('sidebar', '<li><a href="'.ruta('registros/preregistro').'"><span class="icon_lateral icon_buscar"></span><u>Grupo Preregistrado</u> <br /><small>buscar por cum de scouter</small></a></li>');
 	}
 	
@@ -49,6 +50,10 @@ class registros extends Controller{
 			
 			if($_POST['lobato'][8] != ''){
 				$this->form_validation->set_rules('lobato[8]', 'Muchacho 9', 'trim|exact_length[10]|xss_clean|scout_vigente|es_muchacho|pago_evento|lobato_registrado');
+			}
+
+			if($_POST['lobato'][9] != ''){
+				$this->form_validation->set_rules('lobato[9]', 'Muchacho 10', 'trim|exact_length[10]|xss_clean|scout_vigente|es_muchacho|pago_evento|lobato_registrado');
 			}
 			
 			if($this->form_validation->run())
@@ -264,6 +269,34 @@ class registros extends Controller{
 		$this->registro->detalles($cum);
 		$this->template->write_view('content', 'modificar');
 		
+		$this->template->render();
+	}
+
+	public function permuta()
+	{
+		$this->form_validation->set_error_delimiters('<span class="error-form">', '</span>');
+		$this->form_validation->set_rules('pago', 'CUM de Pago',  'trim|required|exact_length[10]|xss_clean|pago_evento|scouter_registrado|lobato_registrado');
+		$this->form_validation->set_rules('reemplazo', 'CUM Reemplazo',  'trim|required|exact_length[10]|xss_clean|scouter_registrado|lobato_registrado');
+		$resultado = 0;
+
+		if($this->form_validation->run())
+		{
+			if($this->registro->permuta($this->input->post('pago'), $this->input->post('reemplazo')))
+			{
+				$resultado = 1;
+			}
+			else
+			{
+				$resultado = -1;
+			}
+		}
+
+		$this->template->add_js('assets/js/jquery.gritter.min.js');
+		$this->template->add_css('assets/css/jquery.gritter.css');
+		$this->template->add_js('assets/js/jquery.uniform.js');
+
+		$this->template->write('content', '<h1 class="titulo_seccion">Cambiar CUM de Pago</h1>');
+		$this->template->write_view('content', 'permuta', array('resultado' => $resultado));
 		$this->template->render();
 	}
 }

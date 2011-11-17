@@ -235,4 +235,18 @@ class Registro extends MY_Model {
 		$this->db->where_in('cum', $del);
 		$this->db->delete('participantes');
 	}
+
+	public function permuta($original, $cambio)
+	{
+		if(!empty($original) && !empty($cambio))
+		{
+			$this->db->where('cum', $original);
+			$this->db->update('pagos', array('cum' => $cambio, 'cambio' => $original));
+			return $this->db->affected_rows();
+		}
+		else
+		{
+			return FALSE;
+		}
+	}
 }
