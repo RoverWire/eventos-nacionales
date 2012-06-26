@@ -11,7 +11,7 @@
 |	http://example.com/
 |
 */
-$config['base_url']	= "http://".$_SERVER["HTTP_HOST"]."/";
+$config['base_url']	= "http://".$_SERVER["HTTP_HOST"]."/eventos-nacionales";
 
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +25,7 @@ $config['base_url']	= "http://".$_SERVER["HTTP_HOST"]."/";
 */
 $config['index_page']    = "index.php";
 
-$config['relative_path'] = "/";          
+$config['relative_path'] = "/eventos-nacionales/";          
 
 /*
 |--------------------------------------------------------------------------
