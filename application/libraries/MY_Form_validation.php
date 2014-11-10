@@ -38,6 +38,7 @@ class MY_Form_validation extends CI_Form_validation{
 		$resultado = $CI->db->get();
 		$existe = ($resultado->num_rows() > 0) ? TRUE:FALSE;
 		$resultado->free_result();
+
 		return $existe;
 	}
 	
