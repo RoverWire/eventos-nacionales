@@ -43,7 +43,7 @@ class MY_Form_validation extends CI_Form_validation{
 	
 	function nivel_valido($str)
 	{
-		$validos = array('SCOUTER', 'DIRIGENTE', 'PADRE SCOUT', 'OFICINA NACIONAL');
+		$validos = array('SCOUTER', 'DIRIGENTE', 'PADRE SCOUT', 'OFICINA NACIONAL', 'ROVER MASCULINO', 'ROVER FEMENINO');
 		$CI =& get_instance();
 		$CI->db->select('cum');
 		$CI->db->from('regnal');

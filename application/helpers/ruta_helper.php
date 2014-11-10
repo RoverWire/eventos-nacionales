@@ -90,7 +90,7 @@ if( ! function_exists('rel_root'))
 			$param = implode('/', $param);
 		}
 		$CI =& get_instance();
-		return $CI->config->item('relative_path').$param;
+		return $CI->config->item('relative_path').'/'.$param;
 	}
 }
 ?>
