@@ -88,7 +88,7 @@ class registros extends Controller{
 	
 	public function paso2($cum = '')
 	{
-		if(empty($cum) && strlen($cum) != 10)
+		if(empty($cum) OR strlen($cum) != 10)
 		{
 			redirect('registros');
 		}
@@ -110,6 +110,7 @@ class registros extends Controller{
 			$this->form_validation->set_rules('Campo', 'Campo', 'trim|required|xss_clean');
 			if($this->form_validation->run()){
 			    $this->registro->asignar_campo($cum, $this->input->post('Campo'));
+				//die('se guarda');
 				redirect('registros/paso2/'.$cum);
 			}
 		}
