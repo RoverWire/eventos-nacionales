@@ -37,7 +37,6 @@
                 <li><a href="<?php echo ruta('campos'); ?>">Campos</a></li>
                 <li><a href="<?php echo ruta('regnal'); ?>">Membresía</a></li>
                 <li><a href="<?php echo ruta('usuarios'); ?>">Usuarios</a></li>
-                <li><a href="<?php echo ruta('actividades'); ?>">Actividades</a></li>
             </ul>
         </div>
     </div>
